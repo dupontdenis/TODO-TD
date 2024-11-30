@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="container mt-5">
+  <div class="alert alert-info"> hello </div>
+  <button class="btn btn-secondary"> Change (5)</button>
+
+  <script>
+    let counter = 5;
+    const div = document.querySelector('div');
+    const button = document.querySelector('button');
+
+    button.textContent = `Change (${counter})`;
+
+    button.addEventListener('click', function () {
+      counter--;
+      div.classList.toggle('text-danger', counter <= 0);
+      if (counter <= 0) {
+        counter = 5; // Reset counter to 5
+      }
+      button.textContent = `Change (${counter})`;
+      console.log('button clicked, counter:', counter);
+    });
+  </script>
+</body>
+
+</html>
