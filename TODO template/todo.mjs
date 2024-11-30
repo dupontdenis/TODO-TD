@@ -65,7 +65,7 @@ document.querySelector("#tasks").addEventListener("click", (event) => {
     target.setAttribute("data-save", "");
     target.removeAttribute("data-edit");
 
-    // Add a return statement to prevent further execution
+    // Add a return statement to prevent further execution or else if
     return;
   }
 
